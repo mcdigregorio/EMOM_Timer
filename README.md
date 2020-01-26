@@ -1,3 +1,5 @@
+![CI](https://github.com/mcdigregorio/EMOM_Timer/workflows/CI/badge.svg)
+
 # EMOM_Timer
 Timer for EMOM workouts
 
