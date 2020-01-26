@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor user
+rectangle EMOM_Timer{
+user-->(set work interval)
+user-->(set rest interval)
+user-->(set duration)
+user-->(start)
+user-->(stop)
+user-->(reset)
+}
+@enduml
