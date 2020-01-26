@@ -8,5 +8,6 @@ user-->(set duration)
 user-->(start)
 user-->(stop)
 user-->(reset)
+(notify interval change)-->user
 }
 @enduml
