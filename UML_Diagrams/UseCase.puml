@@ -5,6 +5,7 @@ rectangle EMOM_Timer{
 user-->(set work interval)
 user-->(set rest interval)
 user-->(set duration)
+user-->(set countdown)
 user-->(start)
 user-->(stop)
 user-->(reset)
