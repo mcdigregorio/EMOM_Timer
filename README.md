@@ -1,5 +1,8 @@
 ![CI](https://github.com/mcdigregorio/EMOM_Timer/workflows/CI/badge.svg)
 
+![.github/workflows/Test_iOS.yml](https://github.com/mcdigregorio/EMOM_Timer/workflows/.github/workflows/Test_iOS.yml/badge.svg)
+
+
 # EMOM_Timer
 Timer for EMOM workouts
 
