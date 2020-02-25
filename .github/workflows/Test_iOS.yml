@@ -13,4 +13,3 @@ jobs:
           target: ios
           host: mac
           install-deps: true
-        run: tree
