@@ -1,0 +1,19 @@
+name: Test_DesktopWin
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Install Qt
+        # Action from https://github.com/jurplel/install-qt-action
+        uses: jurplel/install-qt-action@v2
+        with:
+          version: 5.12.6
+          target: desktop
+          host: windows
+          install-deps: true
+        
+      - name: Print out Qt directory
+        run: echo %Qt5_Dir%
