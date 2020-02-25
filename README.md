@@ -2,6 +2,8 @@
 
 ![Test_iOS](https://github.com/mcdigregorio/EMOM_Timer/workflows/Test_iOS/badge.svg)
 
+![Test_DesktopWin](https://github.com/mcdigregorio/EMOM_Timer/workflows/Test_DesktopWin/badge.svg)
+
 # EMOM_Timer
 Timer for EMOM workouts
 
