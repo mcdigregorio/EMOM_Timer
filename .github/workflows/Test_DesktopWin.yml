@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - name: Opening cmd
+        run: dir
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
         uses: jurplel/install-qt-action@v2
@@ -13,6 +15,7 @@ jobs:
           version: 5.12.6
           target: desktop
           host: windows
+          arch: win64_msvc2017_64
           install-deps: true
         
       - name: Print out Qt directory
