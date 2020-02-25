@@ -4,15 +4,14 @@ on: [push]
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     steps:
     - name: Install Qt
-    uses: jurplel/install-qt-action@v2
-    with:
-      version: 5.12.6
-      target: ios
-      host: mac
-      install-deps: true
-    
-    - name: Tree
+    - uses: jurplel/install-qt-action@v2
+    - with:
+        version: 5.12.6
+        target: ios
+        host: mac
+        install-deps: true
+    - name: Run Tree Cmd
       run: tree
