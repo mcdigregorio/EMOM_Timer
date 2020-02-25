@@ -6,11 +6,11 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-    - name: Install Qt
-    - uses: jurplel/install-qt-action@v2
-    - with:
-        version: 5.12.6
-        target: ios
-        host: mac
-        install-deps: true
-    - run: tree
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v2
+        with:
+          version: 5.12.6
+          target: ios
+          host: mac
+          install-deps: true
+        run: tree
