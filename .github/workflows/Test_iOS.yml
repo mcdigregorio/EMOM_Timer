@@ -14,5 +14,5 @@ jobs:
           host: mac
           install-deps: true
         
-      - name: Run tree cmd
-        run: tree
+      - name: Print out Qt directory
+        run: echo $Qt5_Dir
