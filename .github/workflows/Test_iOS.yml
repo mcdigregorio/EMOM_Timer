@@ -6,8 +6,6 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - name: Fail on purpose
-        run: tree
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
         uses: jurplel/install-qt-action@v2
