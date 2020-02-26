@@ -14,7 +14,6 @@ jobs:
         with:
           version: 5.12.7
           target: desktop
-          host: windows
           install-deps: true
         
       - name: Print out Qt directory
