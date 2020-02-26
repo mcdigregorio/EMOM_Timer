@@ -10,7 +10,7 @@ jobs:
         run: dir
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
-        uses: jurplel/install-qt-action@v2
+        uses: ouuan/install-qt-action@v2.3.1
         with:
           version: 5.12.6
           target: desktop
