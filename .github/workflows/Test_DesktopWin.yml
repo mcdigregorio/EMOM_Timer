@@ -30,7 +30,7 @@ jobs:
         run: |
           cd D:\a\EMOM_Timer\EMOM_Timer\Test
           qmake -project
-          qmake
+          qmake -spec win32-g++
           ls
           cat -e -t -v Makefile
           cat -e -t -v Makefile.Debug
