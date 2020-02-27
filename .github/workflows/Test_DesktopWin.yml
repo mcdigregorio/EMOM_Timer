@@ -20,8 +20,8 @@ jobs:
       - name: Print out qmake version
         run: qmake --version
 
-      - name: dir cmd
-        run: dir /S D:/a/EMOM_Timer/EMOM_Timer/
+      - name: ls cmd
+        run: ls D:/a/EMOM_Timer/EMOM_Timer/ -R
         
       - name: Build hello.cpp
         run: |
