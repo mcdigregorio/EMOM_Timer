@@ -8,18 +8,10 @@ jobs:
     steps:
       - name: Opening cmd
         run: dir
-      - name: Install Python 3.7 version
-        uses: actions/setup-python@v1
-        with:
-          python-version: '3.7'
-          architecture: 'x64'
+         
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
         uses: ouuan/install-qt-action@v2.3.1
-        with:
-          version: 5.12.7
-          target: desktop
-          install-deps: true
         
       - name: Print out Qt directory
         run: echo %Qt5_Dir%
