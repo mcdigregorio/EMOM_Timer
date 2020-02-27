@@ -21,8 +21,8 @@ jobs:
         run: qmake --version
 
       - name: dir cmd
-        run: dir D:/a/EMOM_Timer/EMOM_Timer/
-      
+        run: dir /S D:/a/EMOM_Timer/EMOM_Timer/
+        
       - name: Build hello.cpp
         run: |
           cd D:\a\EMOM_Timer\EMOM_Timer\Test
