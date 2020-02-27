@@ -20,5 +20,5 @@ jobs:
       - name: Print out qmake version
         run: qmake --version
 
-      - name: Tree cmd
-        run: tree D:/a/EMOM_Timer/EMOM_Timer/
+      - name: dir cmd
+        run: dir D:/a/EMOM_Timer/EMOM_Timer/
