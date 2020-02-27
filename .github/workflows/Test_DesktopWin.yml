@@ -9,6 +9,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
+      - name: Install developer command prompt for microsoft visual c++
+        uses: ilammy/msvc-dev-cmd@v1
+       
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
         #Temporarily using ouuan/install-qt-action@v2.3.1 until jurplel has bug fix implemented
@@ -20,8 +23,8 @@ jobs:
       - name: Print out qmake version
         run: qmake --version
 
-      - name: ls cmd
-        run: ls D:/a/EMOM_Timer/ -R
+      #- name: ls cmd
+        #run: ls D:/a/EMOM_Timer/ -R
         
       - name: Build hello.cpp
         run: |
