@@ -32,9 +32,11 @@ jobs:
           qmake -project
           qmake -spec win32-g++
           ls
-          cat -e -t -v Makefile
-          cat -e -t -v Makefile.Debug
-          cat -e -t -v Makefile.Release
+          cat -e -v Makefile
+          cat -e -v Makefile.Debug
+          cat -e -v Makefile.Release
           mingw32-make
           ls
           ./hello
+          ls release -R
+          ./release/hello
