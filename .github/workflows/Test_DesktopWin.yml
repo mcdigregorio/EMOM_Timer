@@ -6,6 +6,9 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
         #Temporarily using ouuan/install-qt-action@v2.3.1 until jurplel has bug fix implemented
@@ -16,3 +19,6 @@ jobs:
 
       - name: Print out qmake version
         run: qmake --version
+
+      - name: Tree cmd
+        run: tree
