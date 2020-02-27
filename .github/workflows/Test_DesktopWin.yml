@@ -21,7 +21,7 @@ jobs:
         run: qmake --version
 
       - name: ls cmd
-        run: ls D:/a/EMOM_Timer/EMOM_Timer/ -R
+        run: ls D:/a/EMOM_Timer/ -R
         
       - name: Build hello.cpp
         run: |
