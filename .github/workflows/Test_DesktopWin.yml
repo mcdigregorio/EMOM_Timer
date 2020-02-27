@@ -9,13 +9,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: Install developer command prompt for microsoft visual c++
-        uses: ilammy/msvc-dev-cmd@v1
+      #- name: Install developer command prompt for microsoft visual c++
+      #  uses: ilammy/msvc-dev-cmd@v1
        
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
         #Temporarily using ouuan/install-qt-action@v2.3.1 until jurplel has bug fix implemented
         uses: ouuan/install-qt-action@v2.3.1
+        with:
+          arch: win64_mingw73
         
       - name: Print out Qt directory
         run: echo %Qt5_Dir%
@@ -26,19 +28,19 @@ jobs:
       - name: ls cmd
         run: ls 'C:\Program Files (x86)\'
         
-      - name: Build hello.cpp
-        run: |
-          cd D:\a\EMOM_Timer\EMOM_Timer\Test
-          qmake -project
-          qmake -spec win32-g++
-          echo "Post qmake commands"
-          ls
-          cat Makefile
-          cat Makefile.Debug
-          cat Makefile.Release
-          mingw32-make
-          ls
-          echo "try executing"
-          ./hello
-          ls release -R
-          ./release/hello
+      #- name: Build hello.cpp
+      #  run: |
+      #    cd D:\a\EMOM_Timer\EMOM_Timer\Test
+      #    qmake -project
+      #    qmake -spec win32-g++
+      #    echo "Post qmake commands"
+      #    ls
+      #    cat Makefile
+      #    cat Makefile.Debug
+      #    cat Makefile.Release
+      #    mingw32-make
+      #    ls
+      #   echo "try executing"
+      #    ./hello
+      #    ls release -R
+      #    ./release/hello
