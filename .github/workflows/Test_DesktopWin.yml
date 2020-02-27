@@ -24,7 +24,7 @@ jobs:
         run: qmake --version
 
       - name: ls cmd
-        run: ls 'C:\Program Files\' -R 
+        run: ls 'C:\Program Files (x86)\'
         
       - name: Build hello.cpp
         run: |
@@ -32,6 +32,6 @@ jobs:
           qmake -project
           qmake
           ls
-          make Makefile
+          mingw32-make
           ls
           ./hello
