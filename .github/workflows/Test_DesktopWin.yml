@@ -34,6 +34,6 @@ jobs:
           dir
           qmake
           dir
-          make
+          nmake
           dir
           ./hello.cpp
