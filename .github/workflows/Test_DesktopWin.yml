@@ -31,12 +31,14 @@ jobs:
           cd D:\a\EMOM_Timer\EMOM_Timer\Test
           qmake -project
           qmake -spec win32-g++
+          echo "Post qmake commands"
           ls
-          cat -e -v Makefile
-          cat -e -v Makefile.Debug
-          cat -e -v Makefile.Release
+          cat Makefile
+          cat Makefile.Debug
+          cat Makefile.Release
           mingw32-make
           ls
+          echo "try executing"
           ./hello
           ls release -R
           ./release/hello
