@@ -21,4 +21,4 @@ jobs:
         run: qmake --version
 
       - name: Tree cmd
-        run: tree
+        run: tree D:/a/EMOM_Timer/EMOM_Timer/
