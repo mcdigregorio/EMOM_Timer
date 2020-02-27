@@ -32,6 +32,9 @@ jobs:
           qmake -project
           qmake
           ls
+          cat -e -t -v Makefile
+          cat -e -t -v Makefile.Debug
+          cat -e -t -v Makefile.Release
           mingw32-make
           ls
           ./hello
