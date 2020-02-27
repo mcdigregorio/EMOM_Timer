@@ -8,6 +8,9 @@ jobs:
     steps:
       - name: Opening cmd
         run: dir
+
+      - name: Checkout
+        uses: actions/checkout@v2
          
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
