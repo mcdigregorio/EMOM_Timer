@@ -35,10 +35,7 @@ jobs:
           qmake
           echo "Post qmake commands"
           ls
-      #    cat Makefile
-      #    cat Makefile.Debug
-      #    cat Makefile.Release
-          mingw32-make
+          make
           ls
           echo "try executing"
       #    ./hello
