@@ -26,7 +26,11 @@ jobs:
       - name: Build hello.cpp
         run: |
           cd D:\a\EMOM_Timer\EMOM_Timer\Test
+          dir
           qmake -project
+          dir
           qmake
+          dir
           make
-          ./hello
+          dir
+          ./hello.cpp
