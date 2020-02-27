@@ -8,7 +8,11 @@ jobs:
     steps:
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
+        #Temporarily using ouuan/install-qt-action@v2.3.1 until jurplel has bug fix implemented
         uses: ouuan/install-qt-action@v2.3.1
         
       - name: Print out Qt directory
         run: echo %Qt5_Dir%
+
+      - name: Print out qmake version
+        run: qmake --version
