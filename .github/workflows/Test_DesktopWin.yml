@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with: 
             name: makefile
-            path: Makefile
+            path: D:\a\EMOM_Timer\EMOM_Timer\Test\Makefile
             
       - name: Run make
         run: |
