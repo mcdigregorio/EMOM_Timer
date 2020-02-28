@@ -23,7 +23,7 @@ jobs:
       - name: Run vcvarsall.bat
         run: |
           cd 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'
-          vcvarsall x86
+          .\vcvarsall x86
 
       - name: Print out qmake version
         run: qmake --version
