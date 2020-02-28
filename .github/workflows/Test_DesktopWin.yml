@@ -49,7 +49,8 @@ jobs:
           ls 
           ls -R
           echo "try executing"
-          ./hello
+          cd D:\a\EMOM_Timer\EMOM_Timer\Test\release
+          ./Test
       #    ./hello
       #    ls release -R
       #    ./release/hello
