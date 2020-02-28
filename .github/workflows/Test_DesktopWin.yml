@@ -51,6 +51,9 @@ jobs:
           echo "try executing"
           cd D:\a\EMOM_Timer\EMOM_Timer\Test\release
           ./Test
-      #    ./hello
-      #    ls release -R
-      #    ./release/hello
+          
+      - name: Upload Exe
+        uses: actions/upload-artifact@v1
+        with:
+          name: Test.exe
+          path: D:\a\EMOM_Timer\EMOM_Timer\Test\release\Test.exe
