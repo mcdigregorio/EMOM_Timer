@@ -23,21 +23,17 @@ jobs:
       - name: Run vcvarsall.bat
         run: |
           cd 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'
-          .\vcvarsall x86
+          .\vcvarsall.bat x86
 
       - name: Print out qmake version
         run: qmake --version
         
       #- name: Print nmake version
       # run: nmake/?
-
-      - name: ls cmd
-        run: ls 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\' -R
-        
       - name: Build hello.cpp
         run: |
           cd D:\a\EMOM_Timer\EMOM_Timer\Test
           qmake -project
-          qmake
+          qmake Test.pro
           echo "Post qmake commands"
           ls
