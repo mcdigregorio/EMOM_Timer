@@ -18,7 +18,7 @@ jobs:
         uses: ouuan/install-qt-action@v2.3.1
         
       - name: Run vcvarsall.bat
-        run: C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat amd64
+        run: 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat amd64'
       
       - name: Print out program files dir
         run: |
