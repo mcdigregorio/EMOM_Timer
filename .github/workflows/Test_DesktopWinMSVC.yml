@@ -22,6 +22,9 @@ jobs:
 
       - name: Print out qmake version
         run: qmake --version
+        
+      - name: Print nmake version
+        run: nmake/?
 
       - name: ls cmd
         run: ls 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\' -R
