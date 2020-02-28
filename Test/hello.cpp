@@ -1,4 +1,4 @@
-#getting started from https://wiki.qt.io/Getting_Started_on_the_Commandline
+//getting started from https://wiki.qt.io/Getting_Started_on_the_Commandline
 
 #include <QTextStream>
 
