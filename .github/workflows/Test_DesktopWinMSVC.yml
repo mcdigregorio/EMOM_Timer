@@ -38,7 +38,8 @@ jobs:
       - name: Build hello.cpp
         run: |
           cd D:\a\EMOM_Timer\EMOM_Timer\Test
-          qmake -project
-          #qmake Test.pro
+          #qmake -project
+          qmake Test.pro
+          nmake
           echo "Post qmake commands"
           ls
