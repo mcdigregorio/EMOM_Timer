@@ -35,6 +35,15 @@ jobs:
           qmake
           echo "Post qmake commands"
           ls
+          
+      - name: Upload Makefile
+        uses: actions/upload-artifact@v1
+        with: 
+            name: makefile
+            path: Makefile
+            
+      - name: Run make
+        run: |
           make
           ls
           echo "try executing"
