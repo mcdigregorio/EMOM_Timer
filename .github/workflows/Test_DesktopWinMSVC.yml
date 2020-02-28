@@ -21,6 +21,9 @@ jobs:
         run: |
           ls 'C:\Program Files (x86)\Microsoft Visual Studio 14.0' -R
           'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat'
+          cd 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64'
+          ls
+          .\vcvars64.bat
       
       - name: Print out program files dir
         run: |
