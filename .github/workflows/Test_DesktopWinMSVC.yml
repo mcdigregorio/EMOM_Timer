@@ -28,8 +28,12 @@ jobs:
       - name: Print out qmake version
         run: qmake --version
       
-      - name: Print out msvc dir
-        run: ls D:/a/EMOM_Timer/Qt/5.12.6/msvc2017_64 -R
+      - name: Print out program files dir
+        run: |
+          ls 'C:\Program Files (x86)\'
+          ls 'C:\Program Files\'
+          ls 'C:\Program Files (x86)\' -R
+          ls 'C:\Program Files\' -R
         
       #- name: Print nmake version
       # run: nmake/?
@@ -38,5 +42,5 @@ jobs:
           cd D:\a\EMOM_Timer\EMOM_Timer\Test
           qmake -project
           #qmake Test.pro
-          #echo "Post qmake commands"
-          #ls
+          echo "Post qmake commands"
+          ls
