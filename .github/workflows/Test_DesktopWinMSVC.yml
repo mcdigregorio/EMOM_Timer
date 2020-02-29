@@ -31,7 +31,7 @@ jobs:
         run: |         
           echo Setting up environment for Qt usage...
           set PATH=D:\a\EMOM_Timer\Qt\5.12.6\msvc2017_64\bin;$Env:Path
-          $out = 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat'
+          $out = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat x64
           echo $out
       
       - name: Print out program files dir
