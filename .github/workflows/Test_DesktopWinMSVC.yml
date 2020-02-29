@@ -17,7 +17,7 @@ jobs:
         #Temporarily using ouuan/install-qt-action@v2.3.1 until jurplel has bug fix implemented
         uses: ouuan/install-qt-action@v2.3.1
         with:
-          arch: win64_msvc2015_64 
+          arch: win32_msvc2015
         
       - name: Run vcvarsall.bat
         run: |
