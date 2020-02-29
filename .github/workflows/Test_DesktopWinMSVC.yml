@@ -18,7 +18,7 @@ jobs:
         uses: ouuan/install-qt-action@v2.3.1
         
       - name: list Qt bin
-        run: ls C:\
+        run: ls D:/a/EMOM_Timer/Qt/5.12.6/msvc2017_64/bin
         
       #- name: Run vcvarsall.bat
        # run: |
