@@ -27,6 +27,14 @@ jobs:
           #cd 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64'
           #ls
           #.\vcvars64.bat
+      - name: setup msvc
+        run: |         
+          echo Setting up environment for Qt usage...
+          set PATH=D:\a\EMOM_Timer\Qt\5.12.6\msvc2017_64\bin;%PATH%
+          cd 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC'
+          .\vcvarsall.bat
+          echo Remember to call vcvarsall.bat to complete environment setup!
+
       
       - name: Print out program files dir
         run: |
