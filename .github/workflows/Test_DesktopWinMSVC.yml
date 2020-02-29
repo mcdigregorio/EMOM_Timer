@@ -49,3 +49,6 @@ jobs:
           qmake -project
           echo "Post qmake commands"
           ls
+          qmake
+          ls
+          make
