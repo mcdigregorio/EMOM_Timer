@@ -19,6 +19,7 @@ jobs:
         
       - name: Search for MSVC 2017
         run: |
+          systeminfo
           set PATH=D:\a\EMOM_Timer\Qt\5.12.6\msvc2017_64\bin;%PATH%
           echo %PATH%
           cd /d "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build"
@@ -42,6 +43,7 @@ jobs:
       # run: nmake/?
       - name: Build hello.cpp
         run: |
+          cl
           echo %PATH%
           cd D:\a\EMOM_Timer\EMOM_Timer\Test
           qmake -project
