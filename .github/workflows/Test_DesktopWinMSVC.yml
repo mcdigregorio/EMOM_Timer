@@ -42,6 +42,7 @@ jobs:
       # run: nmake/?
       - name: Build hello.cpp
         run: |
+          echo %PATH%
           cd D:\a\EMOM_Timer\EMOM_Timer\Test
           qmake -project
           dir
