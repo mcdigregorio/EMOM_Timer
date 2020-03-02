@@ -19,9 +19,11 @@ jobs:
         
       - name: Search for MSVC 2017
         run: |
+          set PATH=D:\a\EMOM_Timer\Qt\5.12.6\msvc2017_64\bin;%PATH%
+          echo %PATH%
           cd /d "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build"
           dir
-          call vcvarsall.bat x86
+          call vcvarsall.bat x64
           cl
         shell: cmd
           
