@@ -8,9 +8,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-      - name: Install developer command prompt for microsoft visual c++
-        uses: ilammy/msvc-dev-cmd@v1
        
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
@@ -22,25 +19,12 @@ jobs:
         
       - name: Run vcvarsall.bat
         run: |
-          cd "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\"
+          cd /d "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\"
           dir
           vcvarsall.bat
           dir
           cl
         shell: cmd
-      #- name: setup msvc
-      #  run: |         
-      #    echo Setting up environment for Qt usage...
-      #    set PATH=D:\a\EMOM_Timer\Qt\5.12.6\msvc2017_64\bin;$Env:Path
-      #    cmd.exe /c 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat 'x64''
-      #    cmd.exe /c 'Start "" "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"'
-
-
-      
-      - name: Print out program files dir
-        run: |
-          ls 'C:\Program Files (x86)\'
-          ls 'C:\Program Files\'
 
       #- name: Print nmake version
       # run: nmake/?
@@ -48,9 +32,8 @@ jobs:
         run: |
           cd D:\a\EMOM_Timer\EMOM_Timer\Test
           qmake -project
-          echo "Post qmake commands"
-          ls
+          dir
           qmake
-          ls
           nmake
+          dir
         shell: cmd
