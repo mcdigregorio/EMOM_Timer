@@ -23,7 +23,6 @@ jobs:
           dir
           call vcvarsall.bat x86
           cl
-          nmake
         shell: cmd
           
         
