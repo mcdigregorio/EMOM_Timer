@@ -19,9 +19,9 @@ jobs:
         
       - name: Search for MSVC 2017
         run: |
-          cd /d "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build"
-          dir
-          call vcvarsall.bat x64
+          cd /d "C:\Program Files (x86)\Microsoft Visual Studio\2019"
+          dir /S
+          #all vcvarsall.bat x64
         shell: cmd
           
         
