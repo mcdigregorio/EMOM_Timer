@@ -20,13 +20,14 @@ jobs:
       - name: list Qt bin
         run: ls D:/a/EMOM_Timer/Qt/5.12.6/msvc2017_64/bin
         
-      #- name: Run vcvarsall.bat
-       # run: |
-        #  ls 'C:\Program Files (x86)\Microsoft Visual Studio 14.0' -R
-         # 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat'
-          #cd 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64'
-          #ls
-          #.\vcvars64.bat
+      - name: Run vcvarsall.bat
+        run: |
+          cd 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC'
+          dir
+          vcvarsall.bat
+          dir
+          cl
+        shell: cmd
       #- name: setup msvc
       #  run: |         
       #    echo Setting up environment for Qt usage...
