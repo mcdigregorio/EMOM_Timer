@@ -17,11 +17,18 @@ jobs:
       - name: list Qt bin
         run: ls D:/a/EMOM_Timer/Qt/5.12.6/msvc2017_64/bin
         
+      - name: Search for MSVC 2017
+        run: |
+          cd /d "C:\Program Files (x86)\Microsoft Visual Studio"
+          dir
+        shell: cmd
+          
+        
       - name: Run vcvarsall.bat
         run: |
           cd /d "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\"
           dir
-          call vcvarsall.bat amd64
+          call vcvarsall.bat x86
           echo "Run dir and cl"
           dir
           cl
