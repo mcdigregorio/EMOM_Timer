@@ -12,36 +12,19 @@ jobs:
       - name: Install Qt
         # Action from https://github.com/jurplel/install-qt-action
         #Temporarily using ouuan/install-qt-action@v2.3.1 until jurplel has bug fix implemented
-        uses: ouuan/install-qt-action@v2.3.1
-        
-      - name: list Qt bin
-        run: ls D:/a/EMOM_Timer/Qt/5.12.6/msvc2017_64/bin          
-        
-      #- name: Run vcvarsall.bat
-      #  run: |
-      #    cd /d "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\"
-      #    dir
-      #    call vcvarsall.bat x86
-      #    echo "Run dir and cl"
-      #    dir
-      #    cl
-      #  shell: cmd
+        uses: ouuan/install-qt-action@v2.3.1      
 
       #- name: Print nmake version
       # run: nmake/?
       - name: Build hello.cpp
         run: |
-          systeminfo
-          set PATH=D:\a\EMOM_Timer\Qt\5.12.6\msvc2017_64\bin;%PATH%
-          cd /d "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build"
-          dir
-          call vcvarsall.bat x64
+          call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
           cl
-          echo %PATH%
+          dir %Qt5_Dir%/lib/cmake
           cd /d D:\a\EMOM_Timer\EMOM_Timer\Test
           qmake -project
-          dir
           qmake
           nmake
           dir
+          dir release
         shell: cmd
