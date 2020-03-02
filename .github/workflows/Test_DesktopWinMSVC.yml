@@ -21,7 +21,9 @@ jobs:
         run: |
           cd /d "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build"
           dir
-          call vcvarsall.bat x64
+          call vcvarsall.bat x86
+          cl
+          nmake
         shell: cmd
           
         
