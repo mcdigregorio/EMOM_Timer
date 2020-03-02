@@ -15,19 +15,7 @@ jobs:
         uses: ouuan/install-qt-action@v2.3.1
         
       - name: list Qt bin
-        run: ls D:/a/EMOM_Timer/Qt/5.12.6/msvc2017_64/bin
-        
-      - name: Search for MSVC 2017
-        run: |
-          systeminfo
-          set PATH=D:\a\EMOM_Timer\Qt\5.12.6\msvc2017_64\bin;%PATH%
-          echo %PATH%
-          cd /d "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build"
-          dir
-          call vcvarsall.bat x64
-          cl
-        shell: cmd
-          
+        run: ls D:/a/EMOM_Timer/Qt/5.12.6/msvc2017_64/bin          
         
       #- name: Run vcvarsall.bat
       #  run: |
@@ -43,9 +31,14 @@ jobs:
       # run: nmake/?
       - name: Build hello.cpp
         run: |
+          systeminfo
+          set PATH=D:\a\EMOM_Timer\Qt\5.12.6\msvc2017_64\bin;%PATH%
+          cd /d "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build"
+          dir
+          call vcvarsall.bat x64
           cl
           echo %PATH%
-          cd D:\a\EMOM_Timer\EMOM_Timer\Test
+          cd /d D:\a\EMOM_Timer\EMOM_Timer\Test
           qmake -project
           dir
           qmake
