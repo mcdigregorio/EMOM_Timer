@@ -20,11 +20,11 @@ jobs:
         run: |
           call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
           cl
-          dir %Qt5_Dir%/lib/cmake
+          echo %Qt5_Dir%
           cd /d D:\a\EMOM_Timer\EMOM_Timer\Test
           qmake -project
           qmake
           nmake
-          dir
-          dir release
+          cd release
+          ./Test
         shell: cmd
