@@ -1,0 +1,31 @@
+@startuml
+class EMOM_Timer
+{
+    -int workInterval
+    -int restInterval
+    -int rounds
+    -int countdownTime
+    -int timeRemaining
+    -int formattedDisplayTime
+
+    -start()
+    -stop()
+    -reset()
+    -notifyIntervalChange()
+    -notifyEnd()
+    -calculateTimeRemaining
+}
+
+class QTime
+{
+    void start()
+    int elapsed()
+}
+
+class QTimer
+{
+    void start(int msec)
+    void stop()
+    void timeout()
+}
+@enduml
