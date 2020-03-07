@@ -3,6 +3,7 @@ left to right direction
 actor user
 rectangle EMOM_Timer{
 user-->(set work interval)
+user-->(set work interval quantity)
 user-->(set rest interval)
 user-->(set duration)
 user-->(set countdown)
